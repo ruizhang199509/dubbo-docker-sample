@@ -10,6 +10,10 @@
 > * DUBBO_DUBBO_PORT_TO_BIND      dubbo协议绑定的port
 > * HESSIAN_DUBBO_IP_TO_REGISTRY  hessian协议注册的ip
 > * DUBBO_DUBBO_PORT_TO_BIND      dubbo协议注册的ip
+> 3. `PORT_TO_REGISTRY`或`IP_TO_REGISTRY`不会用作默认`PORT_TO_BIND`或`IP_TO_BIND`，但是反过来是成立的
+> * 如设置`PORT_TO_REGISTRY=20881` `IP_TO_REGISTRY=30.5.97.6`，则`PORT_TO_BIND` `IP_TO_BIND`不受影响
+> * 如果设置`PORT_TO_BIND=20881` `IP_TO_BIND=30.5.97.6`，则默认`PORT_TO_REGISTRY=20881` `IP_TO_REGISTRY=30.5.97.6`
+> 
 
 [dubbo-docker-sample](https://github.com/dubbo/dubbo-docker-sample)工程本地运行流程： 
  
